@@ -10,7 +10,9 @@ public class Main {
         int day = 1;
         int health = 100;
         int energy = 50;
-        int turn = 0;
+        boolean running = true;
+
+
         Scanner scanner = new Scanner(System.in);
 
         Status player = new Status(health, energy, day);
@@ -19,10 +21,6 @@ public class Main {
         System.out.println("It is day 1, nothing seen for miles.\n"+
                 "What would you like to do?\n");
         options.display(player, scanner);
-
-        System.out.println("it is now day "+ day);
-
-
 
 
     }

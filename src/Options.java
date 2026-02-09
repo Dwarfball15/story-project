@@ -6,7 +6,7 @@ public class Options {
     String eat;
     String check;
 
-    int display(Status player, Scanner scanner) {
+    public static void display(Status player, Scanner scanner) {
         System.out.println("1. Continue");
         System.out.println("2. rest");
         System.out.println("3. eat");
@@ -16,8 +16,9 @@ public class Options {
         int decisions = scanner.nextInt();
         switch (decisions) {
             case 1:
-                System.out.println("you have selected 1");
                 player.day++;
+                player.energy = player.energy - 25;
+                System.out.println("\nIt is now day "+ player.day);
                 break;
             case 2:
                 System.out.println("you have selected 2");
@@ -29,12 +30,20 @@ public class Options {
                 System.out.println("you have selected 4");
                 break;
             case 5:
-                System.out.println("you have selected 5");
+                System.out.println("\n-----STATUS-----");
+                System.out.println("Day: " + player.day);
+                System.out.println("Health:  "+ player.health);
+                System.out.println("Energy:  " + player.energy);
+
                 break;
 
             default:
 
 
-        } return player.day;
+        }
+
+
     }
 }
+
+
