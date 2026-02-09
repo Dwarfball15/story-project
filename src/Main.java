@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
         System.out.println("\nWelcome to group's 5 story game!");
@@ -5,17 +7,20 @@ public class Main {
         System.out.println("SURVIVE TEN DAYS TO WIN");
         System.out.println("HAVE FUN!!!!!!!!!!!!\n");
 
-        int day = 0;
+        int day = 1;
         int health = 100;
         int energy = 50;
         int turn = 0;
+        Scanner scanner = new Scanner(System.in);
 
         Status player = new Status(health, energy, day);
-        options options = new options();
+        Options options = new Options();
 
         System.out.println("It is day 1, nothing seen for miles.\n"+
                 "What would you like to do?\n");
-        options.display();
+        options.display(player, scanner);
+
+        System.out.println("it is now day "+ day);
 
 
 
