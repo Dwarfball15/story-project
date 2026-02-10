@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Options {
@@ -5,6 +6,15 @@ public class Options {
     String rest;
     String eat;
     String check;
+
+
+    /*
+    this class is responsible for the whole game loop
+    mainly interacts with the "Status player" object that was made in main
+    to change a certain aspect of the main character, make sure to do "player.(insert aspect you want to change)
+                                                                                (list of aspects should be in main)
+                                                                                  (or just check the status class)
+     */
 
     public static void display(Status player, Scanner scanner, boolean running) {
         while (running) {
@@ -22,7 +32,10 @@ public class Options {
                     System.out.println("\nIt is now day " + player.day);
                     break;
                 case 2:
-                    System.out.println("you have selected 2");
+                    player.day++;
+                    player.energy = player.energy + 10;
+                    System.out.println("You went to sleep...");
+                    System.out.println("\nIt is now day " + player.day);
                     break;
                 case 3:
                     System.out.println("you have selected 3");
@@ -34,7 +47,7 @@ public class Options {
                     System.out.println("\n-----STATUS-----");
                     System.out.println("Day: " + player.day);
                     System.out.println("Health:  " + player.health);
-                    System.out.println("Energy:  " + player.energy);
+                    System.out.println("Energy:  " + player.energy + "\n");
 
                     break;
 
