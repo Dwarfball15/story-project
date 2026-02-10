@@ -20,7 +20,7 @@ public class Main {
 
         System.out.println("It is day 1, nothing seen for miles.\n"+
                 "What would you like to do?\n");
-        options.display(player, scanner);
+        options.display(player, scanner,running);
 
 
     }
