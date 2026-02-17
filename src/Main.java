@@ -10,12 +10,13 @@ public class Main {
         int day = 1;
         int health = 100;
         int energy = 50;
+        String location = "beginning";
         boolean running = true;
 
 
         Scanner scanner = new Scanner(System.in);
 
-        Status player = new Status(health, energy, day);
+        Status player = new Status(health, energy, day,location);
         Options options = new Options();
 
         System.out.println("It is day 1, nothing seen for miles.\n"+

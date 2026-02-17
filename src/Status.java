@@ -2,11 +2,13 @@ class Status {
     int health;
     int energy;
     int day;
+    String location;
 
-    Status(int health, int energy, int day){
+    Status(int health, int energy, int day, String location){
         this.health = health;
         this.energy = energy;
         this.day = day;
+        this.location = location;
     }
 
     void display(){
