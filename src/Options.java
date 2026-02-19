@@ -45,9 +45,11 @@ public class Options {
                     break;
                 case 5:
                     System.out.println("\n-----STATUS-----");
-                    System.out.println("Day: " + player.day);
-                    System.out.println("Health:  " + player.health);
-                    System.out.println("Energy:  " + player.energy + "\n");
+                    System.out.println("DAY: " + player.day);
+                    System.out.println("TIME: "+ player.phase[0]);
+                    System.out.println("HEALTH:  " + player.health);
+                    System.out.println("ENERGY:  " + player.energy + "\n");
+
 
                     break;
 

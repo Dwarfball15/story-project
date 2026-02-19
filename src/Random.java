@@ -87,7 +87,7 @@ public class Random {
 
             case 10:
                 System.out.println("Nothing happened...");
-                System.out.println("Nothing ever happen...");
+                System.out.println("Nothing ever happens...");
                 break;
 
         }
