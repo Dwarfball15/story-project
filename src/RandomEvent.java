@@ -24,7 +24,7 @@ public class RandomEvent {
 
         switch (randomNum()){
             case 1:
-                System.out.println("\nCoyote attacked you while traveling!");
+                System.out.println("\nCoyote attacked you while sleeping!");
                 System.out.println("You lose 25 health!");
                 System.out.println("make sure you either sleep or eat to recover!");
                 player.health = player.health - 25;

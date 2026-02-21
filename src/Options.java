@@ -19,6 +19,7 @@ public class Options extends Random {
      */
 
     public static void display(Status player, Scanner scanner, boolean running, int phaseIndex) {
+        RandomEvent randomEvent = new RandomEvent();
         while (running) {
             System.out.println("1. Continue");
             System.out.println("2. rest");
@@ -44,6 +45,7 @@ public class Options extends Random {
                     System.out.println("You went to sleep...");
                     System.out.println("\nIt is now day " + player.day);
                     System.out.println("It is now: " + player.phase[player.phaseIndex]);
+                    randomEvent.Encounter(player);
 
 
                     break;
