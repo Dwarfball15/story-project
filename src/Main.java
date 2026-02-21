@@ -26,6 +26,6 @@ public class Main {
         System.out.println("it is now: " + player.phase[player.phaseIndex] + "\n");
         options.display(player, scanner,running, phaseIndex);
 
-
+        //testing commit 
     }
 }
