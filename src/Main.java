@@ -13,16 +13,18 @@ public class Main {
         String location = "beginning";
         boolean running = true;
         String[] phase = {"Morning", "Afternoon", "Evening"};
+        int phaseIndex = 0;
 
 
         Scanner scanner = new Scanner(System.in);
 
-        Status player = new Status(health, energy, day, location, phase);
+        Status player = new Status(health, energy, day, location, phase, phaseIndex);
         Options options = new Options();
 
         System.out.println("It is day 1, nothing seen for miles.\n"+
-                "What would you like to do?\n");
-        options.display(player, scanner,running);
+                "What would you like to do?");
+        System.out.println("it is now: " + player.phase[player.phaseIndex] + "\n");
+        options.display(player, scanner,running, phaseIndex);
 
 
     }

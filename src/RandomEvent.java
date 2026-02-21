@@ -1,4 +1,4 @@
-public class Random {
+public class RandomEvent {
     java.util.Random random = new java.util.Random();
 
     public int randomNum() {
@@ -28,6 +28,7 @@ public class Random {
                 System.out.println("You lose 25 health!");
                 System.out.println("make sure you either sleep or eat to recover!");
                 player.health = player.health - 25;
+                break;
 
             case 2:
                 player.energy = player.energy +10;
