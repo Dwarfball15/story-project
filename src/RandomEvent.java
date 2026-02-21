@@ -5,7 +5,7 @@ public class RandomEvent {
         return random.nextInt(10) + 1;
     }
 
-    public void Encounter(Status player){
+    public void Encounter(Status player) {
         /*
         base player stats:
         health: 100
@@ -21,8 +21,7 @@ public class RandomEvent {
          */
 
 
-
-        switch (randomNum()){
+        switch (randomNum()) {
             case 1:
                 System.out.println("\nCoyote attacked you while sleeping!");
                 System.out.println("You lose 25 health!");
@@ -31,7 +30,7 @@ public class RandomEvent {
                 break;
 
             case 2:
-                player.energy = player.energy +10;
+                player.energy = player.energy + 10;
                 System.out.println("Nothing happened!");
                 System.out.println("It seems luck is on your side!");
                 System.out.println("+10 energy!");
@@ -44,7 +43,7 @@ public class RandomEvent {
                 break;
 
             case 4:
-                player.energy = player.energy +15;
+                player.energy = player.energy + 15;
                 System.out.println("Seemed like you slept well!");
                 System.out.println("+15 energy");
                 break;
@@ -57,7 +56,7 @@ public class RandomEvent {
                 break;
 
             case 6:
-                player.energy = player.energy +10;
+                player.energy = player.energy + 10;
                 System.out.println("Nothing happened!");
                 System.out.println("It seems luck is on your side!");
                 System.out.println("+10 energy!");

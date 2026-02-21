@@ -2,7 +2,7 @@ import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Options extends Random {
+public class Options {
     String Continue;
     String rest;
     String eat;                                  //probably will delete this String in the end product
@@ -20,6 +20,7 @@ public class Options extends Random {
 
     public static void display(Status player, Scanner scanner, boolean running, int phaseIndex) {
         RandomEvent randomEvent = new RandomEvent();
+        Randomitem item = new Randomitem();
         while (running) {
             System.out.println("1. Continue");
             System.out.println("2. rest");

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("\nWelcome to group's 5 story game!");
         System.out.println("Make sure you remember to track HEALTH-INVENTORY-ENERGY");
         System.out.println("SURVIVE TEN DAYS TO WIN");
@@ -21,11 +21,9 @@ public class Main {
         Status player = new Status(health, energy, day, location, phase, phaseIndex);
         Options options = new Options();
 
-        System.out.println("It is day 1, nothing seen for miles.\n"+
+        System.out.println("It is day 1, nothing seen for miles.\n" +
                 "What would you like to do?");
         System.out.println("it is now: " + player.phase[player.phaseIndex] + "\n");
-        options.display(player, scanner,running, phaseIndex);
-
-        //testing commit 
+        options.display(player, scanner, running, phaseIndex);
     }
 }
