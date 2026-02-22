@@ -32,14 +32,35 @@ public class Options {
             int decisions = scanner.nextInt();
             switch (decisions) {
                 case 1:
+                    item.item(player);
                     player.phaseIndex++;
+                    player.energy = player.energy - 5;
                     if (player.phaseIndex >= player.phase.length) {
+                        player.day++;
                         player.phaseIndex = 0;
-                        player.energy = player.energy - 5;
+                        System.out.println("\nIt is now day: " + player.day);
+                        System.out.println("It is now: " + player.phase[player.phaseIndex]);
                     } else {
                         System.out.println("\nIt is now: " + player.phase[player.phaseIndex]);
-                        break;
                     }
+
+                    if (player.energy == 0) {
+                        System.out.println("---------GAME OVER----------");
+                        System.out.println("You ran out of energy!");
+                        System.out.println("make you sure you sleep or use items to replenish your stats!");
+                        System.exit(0);
+                    }
+
+                    if (player.health == 0) {
+                        System.out.println("---------GAME OVER----------");
+                        System.out.println("You ran out of health!");
+                        System.out.println("make you sure you use items to replenish your stats!");
+                        System.exit(0);
+                    }
+
+
+                    break;
+
                 case 2:
                     player.day++;
                     player.phaseIndex = 0;
@@ -48,6 +69,20 @@ public class Options {
                     System.out.println("\nIt is now day " + player.day);
                     System.out.println("It is now: " + player.phase[player.phaseIndex]);
                     randomEvent.Encounter(player);
+
+                    if (player.energy == 0) {
+                        System.out.println("---------GAME OVER----------");
+                        System.out.println("You ran out of energy!");
+                        System.out.println("make you sure you sleep or use items to replenish your stats!");
+                        System.exit(0);
+                    }
+
+                    if (player.health == 0) {
+                        System.out.println("---------GAME OVER----------");
+                        System.out.println("You ran out of health!");
+                        System.out.println("make you sure you use items to replenish your stats!");
+                        System.exit(0);
+                    }
 
 
                     break;

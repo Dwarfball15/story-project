@@ -13,7 +13,7 @@ class Status {
         this.day = day;         //counts the day number
         this.location = location;    //might be used to determine where the player is?
         this.phase = phase;     //keeps track of time (morning, afternoon, evening)
-        this.phaseIndex = phaseIndex;
+        this.phaseIndex = phaseIndex; //keeps track of time
         this.storage = storage;
 
 
