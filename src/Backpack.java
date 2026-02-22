@@ -15,12 +15,11 @@ public class Backpack {
         System.out.println("|                           |");
         System.out.println("|                           |");
         System.out.println("|                           |");
+        System.out.println("|   " + player.storage[3] + "   " + player.storage[4] + "   " + player.storage[5] + "   |");
         System.out.println("|                           |");
         System.out.println("|                           |");
         System.out.println("|                           |");
-        System.out.println("|                           |");
-        System.out.println("|                           |");
-        System.out.println("|                           |");
+        System.out.println("|   " + player.storage[6] + "   " + player.storage[7] + "   " + player.storage[8] + "   |");
         System.out.println("------------------------------");
 
     }

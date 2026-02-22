@@ -14,7 +14,7 @@ public class Main {
         boolean running = true;
         String[] phase = {"Morning", "Afternoon", "Evening"};
         int phaseIndex = 0;
-        String[] storage = {"EMPTY" + "EMPTY" + "EMPTY" + "EMPTY" + "EMPTY" + "EMPTY" + "EMPTY" + "EMPTY" + "EMPTY"};
+        String[] storage = {"EMPTY" , "EMPTY" , "EMPTY" , "EMPTY" , "EMPTY" , "EMPTY" , "EMPTY" , "EMPTY" , "EMPTY"};
 
 
         Scanner scanner = new Scanner(System.in);
