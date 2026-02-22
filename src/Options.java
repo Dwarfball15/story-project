@@ -43,6 +43,7 @@ public class Options {
                     } else {
                         System.out.println("\nIt is now: " + player.phase[player.phaseIndex]);
                     }
+                    System.out.println("You find yourself in: " + player.location.genLocation());
 
                     if (player.energy == 0) {
                         System.out.println("---------GAME OVER----------");

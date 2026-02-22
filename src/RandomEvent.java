@@ -79,7 +79,7 @@ public class RandomEvent {
             case 9:
                 player.health = player.health + 10;
                 player.energy = player.energy + 10;
-                System.out.println("You got hit with lighting!");
+                System.out.println("You got hit with lightning!");
                 System.out.println("Perhaps you got really lucky...");
                 System.out.println("+10 energy");
                 System.out.println("+10 health");
