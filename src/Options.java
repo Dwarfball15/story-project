@@ -24,10 +24,10 @@ public class Options {
         // Backpack backpack = new Backpack(player.storage); //sasha commented this out 2/22
         while (running) {
             System.out.println("1. Continue");
-            System.out.println("2. rest");
-            System.out.println("3. eat");
-            System.out.println("4. check inventory");
-            System.out.println("5. check status");
+            System.out.println("2. Rest");
+            System.out.println("3. Use Items");
+            System.out.println("4. Check Inventory");
+            System.out.println("5. Check Status");
             System.out.print("\nPlease select an option: ");
             int decisions = scanner.nextInt();
             switch (decisions) {
@@ -87,7 +87,39 @@ public class Options {
 
                     break;
                 case 3:
-                    System.out.println("you have selected 3");
+                    player.backpack.display();
+                    System.out.print("Please Select an Item (1-9): ");
+                    int slot = scanner.nextInt() - 1;
+
+                    switch (player.backpack.storage[slot]){
+                        case "Tater":
+                            player.health += 10;
+                            player.backpack.storage[slot] = "EMPTY";
+                            System.out.println("You ate the Potato! +10 Health");
+                            break;
+
+                        case "BAND":
+                            player.health += 20;
+                            player.backpack.storage[slot] = "EMPTY";
+                            System.out.println("You have used Bandages! +20 Health");
+                            break;
+
+                        case "CT":
+                            player.energy += 10;
+                            player.backpack.storage[slot] = "EMPTY";
+                            System.out.println("You have used Canteen! +10 Energy");
+                            break;
+
+
+                        case "EMPTY":
+                            System.out.println("Nothing there!");
+                            break;
+
+
+                        default:
+                            System.out.println("Please input a valid item!");
+                    }
+
                     break;
                 case 4:
                     System.out.println("          BACKPACK         ");
