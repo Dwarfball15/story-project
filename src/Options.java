@@ -21,7 +21,7 @@ public class Options {
     public static void display(Status player, Scanner scanner, boolean running, int phaseIndex) {
         RandomEvent randomEvent = new RandomEvent();
         Randomitem item = new Randomitem();
-        Backpack backpack = new Backpack(player.storage);
+        // Backpack backpack = new Backpack(player.storage); //sasha commented this out 2/22
         while (running) {
             System.out.println("1. Continue");
             System.out.println("2. rest");
@@ -92,7 +92,7 @@ public class Options {
                     break;
                 case 4:
                     System.out.println("          BACKPACK         ");
-                    backpack.display(player);
+                    player.backpack.display(); //changed by Sasha 2/22
                     break;
                 case 5:
                     System.out.println("\n-----STATUS-----");

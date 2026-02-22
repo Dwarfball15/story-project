@@ -5,7 +5,7 @@ class Status {
     Location location;
     String[] phase;
     int phaseIndex;
-    String[] storage;
+    Backpack backpack;
 
     Status(int health, int energy, int day, String location, String[] phase, int phaseIndex, String[] storage) {
         this.health = health;  // player health
@@ -14,7 +14,7 @@ class Status {
         this.location = new Location(location);    //might be used to determine where the player is?
         this.phase = phase;     //keeps track of time (morning, afternoon, evening)
         this.phaseIndex = phaseIndex; //keeps track of time
-        this.storage = storage;
+        this.backpack = new Backpack(storage);
 
 
     }

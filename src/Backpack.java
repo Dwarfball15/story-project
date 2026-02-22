@@ -4,22 +4,20 @@ public class Backpack {
 
     Backpack(String[] storage) {
         this.storage = storage;
-
-
     }
 
 
-    public void display(Status player) {
+    public void display() {
         System.out.println("------------------------------");
-        System.out.println("    " + player.storage[0] + "   " + player.storage[1] + "   " + player.storage[2] + "    ");
+        System.out.println("    " + this.storage[0] + "   " + this.storage[1] + "   " + this.storage[2] + "    ");
         System.out.println("                             ");
         System.out.println("                             ");
         System.out.println("                             ");
-        System.out.println("    " + player.storage[3] + "   " + player.storage[4] + "   " + player.storage[5] + "    ");
+        System.out.println("    " + this.storage[3] + "   " + this.storage[4] + "   " + this.storage[5] + "    ");
         System.out.println("                             ");
         System.out.println("                             ");
         System.out.println("                             ");
-        System.out.println("    " + player.storage[6] + "   " + player.storage[7] + "   " + player.storage[8] + "    ");
+        System.out.println("    " + this.storage[6] + "   " + this.storage[7] + "   " + this.storage[8] + "    ");
         System.out.println("------------------------------");
 
     }

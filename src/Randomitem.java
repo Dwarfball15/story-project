@@ -32,7 +32,7 @@ public class Randomitem {
                     System.out.print("Do you want to keep it? (Y/N):");
                     String pickup = scanner.next();
                     if (pickup.equalsIgnoreCase("y")) {
-                        player.storage[counter] = "PJ";
+                        player.backpack.storage[counter] = "PJ";
                         counter++;
                         System.out.println("You have stored the Pickle Jar");
 
@@ -47,7 +47,7 @@ public class Randomitem {
                     System.out.print("Would you like to pick it up? (Y/N):");
                     String pickup2 = scanner.next();
                     if (pickup2.equalsIgnoreCase("y")) {
-                        player.storage[counter] = "Tater";
+                        player.backpack.storage[counter] = "Tater";
                         counter++;
                         System.out.println("You have stored the Potato");
                     } else {
@@ -61,7 +61,7 @@ public class Randomitem {
                     System.out.print("Would you like to pick it up? (Y/N):");
                     String pickup3 = scanner.next();
                     if (pickup3.equalsIgnoreCase("y")) {
-                        player.storage[counter] = "BAND";
+                        player.backpack.storage[counter] = "BAND";
                         counter++;
                         System.out.println("You have stored the Bandages");
                     } else {
@@ -75,7 +75,7 @@ public class Randomitem {
                     System.out.print("Would you like to pick it up? (Y/N):");
                     String pickup4 = scanner.next();
                     if (pickup4.equalsIgnoreCase("y")) {
-                        player.storage[counter] = "CT";
+                        player.backpack.storage[counter] = "CT";
                         counter++;
                         System.out.println("You have stored the Canteen");
                     } else {
