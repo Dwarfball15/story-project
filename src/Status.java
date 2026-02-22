@@ -19,6 +19,16 @@ class Status {
 
     }
 
+    Status (String playerName){
+        this.health = 100;
+        this.energy = 50;
+        this.day = 1;
+        this.location = new Location("Beginning");
+        this.phase = new String[] {"Morning", "Afternoon", "Evening"};
+        this.phaseIndex = 0;
+        this.backpack = new Backpack(new String[] {"EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY"});
+    }
+
     void display() {
         System.out.println("CURRENT STATUS:");
         System.out.println("HEALTH: " + health);                //display method does literally nothing right now

@@ -18,7 +18,7 @@ public class Options {
                                                                                   (or just check the status class)
      */
 
-    public static void display(Status player, Scanner scanner, boolean running, int phaseIndex) {
+    public static void display(Status player, Scanner scanner, boolean running) {
         RandomEvent randomEvent = new RandomEvent();
         Randomitem item = new Randomitem();
         // Backpack backpack = new Backpack(player.storage); //sasha commented this out 2/22
@@ -65,7 +65,6 @@ public class Options {
                 case 2:
                     player.day++;
                     player.phaseIndex = 0;
-                    player.energy = player.energy + 10;
                     System.out.println("You went to sleep...");
                     System.out.println("\nIt is now day " + player.day);
                     System.out.println("It is now: " + player.phase[player.phaseIndex]);
