@@ -12,7 +12,7 @@ public class Randomitem {
 
 
     int randomitem() {
-        return random.nextInt(3) + 1;
+        return random.nextInt(4) + 1;
     }
 
 
