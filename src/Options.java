@@ -21,6 +21,7 @@ public class Options {
     public static void display(Status player, Scanner scanner, boolean running, int phaseIndex) {
         RandomEvent randomEvent = new RandomEvent();
         Randomitem item = new Randomitem();
+        Backpack backpack = new Backpack(player.storage);
         while (running) {
             System.out.println("1. Continue");
             System.out.println("2. rest");
@@ -54,7 +55,8 @@ public class Options {
                     System.out.println("you have selected 3");
                     break;
                 case 4:
-                    System.out.println("you have selected 4");
+                    System.out.println("          BACKPACK         ");
+                    backpack.display(player);
                     break;
                 case 5:
                     System.out.println("\n-----STATUS-----");
@@ -63,7 +65,6 @@ public class Options {
                     System.out.println("HEALTH:  " + player.health);
                     System.out.println("ENERGY:  " + player.energy + "\n");
                     break;
-
                 default:
             }
         }
