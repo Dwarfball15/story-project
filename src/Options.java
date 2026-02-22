@@ -91,7 +91,7 @@ public class Options {
                     System.out.print("Please Select an Item (1-9): ");
                     int slot = scanner.nextInt() - 1;
 
-                    switch (player.backpack.storage[slot]){
+                    switch (player.backpack.storage[slot]) {
                         case "Tater":
                             player.health += 10;
                             player.backpack.storage[slot] = "EMPTY";

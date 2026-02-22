@@ -20,6 +20,11 @@ public class Main {
 
         boolean running = true;
 
+        Room[] rooms = {
+                new Room("Old House", "The house looks old. The windows are broken with few of them stained. It seems like no-one has been here in ages", "Key", "Rabid Coyote", false),
+                new Room("Mine Shaft", "Seems like an old Mine Shaft when gold was abundant. There might be something down there...", "gold", "Dwarf", false),
+        };
+
 
         Scanner scanner = new Scanner(System.in);
 

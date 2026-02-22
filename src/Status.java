@@ -19,14 +19,14 @@ class Status {
 
     }
 
-    Status (String playerName){
+    Status(String playerName) {
         this.health = 100;
         this.energy = 50;
         this.day = 1;
         this.location = new Location("Beginning");
-        this.phase = new String[] {"Morning", "Afternoon", "Evening"};
+        this.phase = new String[]{"Morning", "Afternoon", "Evening"};
         this.phaseIndex = 0;
-        this.backpack = new Backpack(new String[] {"EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY"});
+        this.backpack = new Backpack(new String[]{"EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY", "EMPTY"});
     }
 
     void display() {
