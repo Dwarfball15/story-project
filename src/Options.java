@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Options {
@@ -21,6 +19,8 @@ public class Options {
     public static void display(Status player, Scanner scanner, boolean running) {
         RandomEvent randomEvent = new RandomEvent();
         Randomitem item = new Randomitem();
+        int slot = scanner.nextInt() - 1;
+
         // Backpack backpack = new Backpack(player.storage); //sasha commented this out 2/22
         while (running) {
             System.out.println("1. Continue");
@@ -44,6 +44,13 @@ public class Options {
                         System.out.println("\nIt is now: " + player.phase[player.phaseIndex]);
                     }
                     System.out.println("You find yourself in: " + player.location.genLocation());
+
+
+
+
+
+
+
 
                     if (player.energy == 0) {
                         System.out.println("---------GAME OVER----------");
@@ -89,7 +96,7 @@ public class Options {
                 case 3:
                     player.backpack.display();
                     System.out.print("Please Select an Item (1-9): ");
-                    int slot = scanner.nextInt() - 1;
+
 
                     switch (player.backpack.storage[slot]) {
                         case "Tater":
