@@ -10,7 +10,6 @@ public class Room {
     String exit;
     Random random = new Random();
 
-    // Full constructor
     Room(String name, String description, String item, String challenge, boolean solved, String exit) {
         this.name = name;
         this.description = description;
@@ -20,7 +19,6 @@ public class Room {
         this.exit = exit;
     }
 
-    // Overloaded constructor - room with no item
     Room(String name, String description, String challenge, boolean solved, String exit) {
         this.name = name;
         this.description = description;
