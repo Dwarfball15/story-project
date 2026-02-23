@@ -19,7 +19,6 @@ public class Options {
     public static void display(Status player, Scanner scanner, boolean running) {
         RandomEvent randomEvent = new RandomEvent();
         Randomitem item = new Randomitem();
-        int slot = scanner.nextInt() - 1;
 
         // Backpack backpack = new Backpack(player.storage); //sasha commented this out 2/22
         while (running) {
@@ -45,14 +44,12 @@ public class Options {
                     }
                     System.out.println("You find yourself in: " + player.location.genLocation());
 
+                    //random location
+                    System.out.println("You find yourself in: " + player.location.genLocation());
+                    new Room("", "", "", false).display(player);
 
 
-
-
-
-
-
-                    if (player.energy == 0) {
+                    if (player.energy <= 0) {
                         System.out.println("---------GAME OVER----------");
                         System.out.println("You ran out of energy!");
                         System.out.println("make you sure you sleep or use items to replenish your stats!");
@@ -96,6 +93,7 @@ public class Options {
                 case 3:
                     player.backpack.display();
                     System.out.print("Please Select an Item (1-9): ");
+                    int slot = scanner.nextInt() - 1;
 
 
                     switch (player.backpack.storage[slot]) {
