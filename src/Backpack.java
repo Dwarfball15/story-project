@@ -1,3 +1,5 @@
+
+//Duy worked on this class
 public class Backpack {
     String[] storage;
 

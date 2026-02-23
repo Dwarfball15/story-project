@@ -1,6 +1,8 @@
 public class RandomEvent {
     java.util.Random random = new java.util.Random();
 
+    //Duy, Gared, Sasha, all worked on this class
+
     public int randomNum() {
         return random.nextInt(10) + 1;
     }

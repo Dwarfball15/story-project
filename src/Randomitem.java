@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-
+//Sasha and Gared worked on this class
 public class Randomitem {
     Random random = new Random();
     Scanner scanner = new Scanner(System.in);

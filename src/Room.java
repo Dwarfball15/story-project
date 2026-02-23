@@ -1,44 +1,47 @@
 import java.util.Random;
 import java.util.Scanner;
-
+//sasha worked on this class
 public class Room {
     String name;
     String description;
     String item;
     String challenge;
     boolean solved;
+    String exit;
     Random random = new Random();
 
-    int randomNum() { return random.nextInt(10) + 1; }
-    int randomRoom() { return random.nextInt(2) + 1; }  // 1 or 2 for which room
-
-    Room(String name, String description, String item, String challenge, boolean solved) {
+    // Full constructor
+    Room(String name, String description, String item, String challenge, boolean solved, String exit) {
         this.name = name;
         this.description = description;
         this.item = item;
         this.challenge = challenge;
         this.solved = false;
+        this.exit = exit;
     }
 
     // Overloaded constructor - room with no item
-    Room(String name, String description, String challenge, boolean solved) {
+    Room(String name, String description, String challenge, boolean solved, String exit) {
         this.name = name;
         this.description = description;
         this.item = "EMPTY";
         this.challenge = challenge;
         this.solved = false;
+        this.exit = exit;
     }
 
-    public void display(Status player) {
-        Room room0 = new Room("Mine Shaft", "Seems like an old Mine Shaft when gold was abundant. There might be something down there...", "gold", "Dwarf", false);
-        Room room1 = new Room("Old House", "It seems like an old home. Windows are broken and stained from time. It seems like no-one is home...", "cheese", "Rabid Wolf", false);
+    int randomNum() { return random.nextInt(10) + 1; }
+
+    public void display(Status player, Room[] rooms) {
         Scanner scanner = new Scanner(System.in);
 
         if (randomNum() <= 5) {  // 50% chance a building appears
-            Room current = (randomRoom() == 1) ? room0 : room1;  // randomly pick which room
+            int roomPick = random.nextInt(3);
+            Room current = rooms[roomPick];
 
             System.out.println("\nYou spot a " + current.name + " in the distance!");
             System.out.println(current.description);
+            System.out.println("Exit direction: " + current.exit);
             System.out.print("Would you like to enter? (Y/N): ");
             String choice = scanner.next();
 
@@ -56,9 +59,10 @@ public class Room {
                     }
                 }
 
-                System.out.println("You head towards the exit... Oh no! A " + current.challenge + " is blocking your exit!");
+                System.out.println("\nYou head towards the " + current.exit + " exit...");
+                System.out.println("Oh no! A " + current.challenge + " is blocking your exit!");
                 System.out.println("What are you going to do?");
-                System.out.println("1. Throw the " + current.item + " as a distraction");
+                System.out.println("1. Throw the " + current.item + " as a distraction (lose item)");
                 System.out.println("2. Take your chances and run past it (50/50)");
                 System.out.println("3. Fight your way out (-30 health)");
                 System.out.print("Please choose: ");
@@ -66,7 +70,6 @@ public class Room {
 
                 switch (option) {
                     case 1:
-                        // remove item from backpack
                         for (int i = 0; i < player.backpack.storage.length; i++) {
                             if (player.backpack.storage[i].equals(current.item)) {
                                 player.backpack.storage[i] = "EMPTY";
@@ -75,7 +78,7 @@ public class Room {
                         }
                         System.out.println("You throw the " + current.item + "!");
                         System.out.println("The " + current.challenge + " is distracted!");
-                        System.out.println("You sprint out of the building safely!");
+                        System.out.println("You sprint out through the " + current.exit + " exit safely!");
                         break;
 
                     case 2:

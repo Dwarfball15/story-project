@@ -1,3 +1,5 @@
+
+//Gared worked on this class
 class Status {
     int health;
     int energy;
